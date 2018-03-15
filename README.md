@@ -1,6 +1,6 @@
 # docker-burp-rest-api
 
-Easily build/run [burp-rest-api](https://github.com/vmware/burp-rest-api) in Docker by [Glenn 'devalias' Grant](http://devalias.net/) ([@_devalias](https://twitter.com/_devalias))
+Easily build/run [vmware/burp-rest-api](https://github.com/vmware/burp-rest-api) in Docker by [Glenn 'devalias' Grant](http://devalias.net/) ([@_devalias](https://twitter.com/_devalias))
 
 Original [Burp](https://portswigger.net/burp) Dockerfile inspired by [ilyaglow/docker-burp](https://github.com/ilyaglow/docker-burp)
 
