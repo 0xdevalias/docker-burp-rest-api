@@ -1,0 +1,22 @@
+# TODO: Ideally the update this to work with a modern gradle, then we can use that directly
+# TODO: Currently this seems to fail to build in docker for some reason: https://github.com/vmware/burp-rest-api/issues/32
+
+# FROM gradle:4.6.0-jdk8-alpine
+FROM openjdk:8-jdk-alpine AS build-env
+LABEL maintainer="Glenn 'devalias' Grant (@_devalias, devalias.net)"
+# USER root
+RUN apk add --no-cache git ca-certificates bash
+# USER gradle
+
+# ARG BURP_JAVA_PREFS="/home/burp/.java"
+ENV BURP_VERSION="1.7.32"
+
+WORKDIR /home/burp-rest-api
+RUN git clone https://github.com/vmware/burp-rest-api.git .
+COPY burpsuite_pro_v${BURP_VERSION}.jar ./lib/burpsuite_pro.jar
+COPY .java/ /root/.java
+# RUN ./gradlew clean build
+
+CMD ["/bin/sh"]
+
+# build/libs/burp-rest-api-1.0.2.jar

@@ -1,0 +1,14 @@
+.DS_STORE
+
+# No proprietary jars in my repo!
+
+burp-rest-api-*.jar
+burpsuite*.jar
+
+# Keep our 'empty' folders, but not their contents
+
+.BurpSuite/*
+!.BurpSuite/.gitkeep
+
+.java/*
+!.java/.gitkeep

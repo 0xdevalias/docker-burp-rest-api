@@ -1,0 +1,19 @@
+version: "2"
+services:
+  burp:
+    build: .
+    image: ${USER}/burp-rest-api
+    command:
+      - "--config-file=./share/burpsettings-proxy.json"
+    volumes:
+      - ".java:/home/burp/.java"
+      - ".BurpSuite:/home/burp/.BurpSuite"
+      - "./share:/home/burp/share"
+      # - "/tmp/.X11-unix:/tmp/.X11-unix"
+      # - ${HOME}/.Xauthority:/home/burp/.Xauthority
+    # environment:
+    #   DISPLAY # On macOS, you may have to set this to "YOURLOCALIP:0"
+    ports:
+      - "127.0.0.1:8080:8080" # Burp
+      - "127.0.0.1:8090:8090" # API
+    mem_limit: 2G
