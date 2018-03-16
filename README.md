@@ -87,3 +87,7 @@ Once this is done, you should have burp listening on port `8080`, and the API li
 ## Improvements
 
 * Fix build, then it's docker multistage build time: https://github.com/vmware/burp-rest-api/issues/32
+
+## You may also enjoy
+
+* [0xdevalias/go-burp-rest](https://github.com/0xdevalias/go-burp-rest) : Golang API client for vmware/burp-rest-api
